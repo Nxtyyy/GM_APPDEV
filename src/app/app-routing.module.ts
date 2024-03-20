@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ActivityPagePage } from './activity-page/activity-page.page';
 
 const routes: Routes = [
   {
@@ -8,9 +9,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'assignment1',
+    redirectTo: 'activity-page',
     pathMatch: 'full'
-  }
+  },
+  {
+    path: 'activity-page',
+    loadChildren: () => import('./activity-page/activity-page.module').then( m => m.ActivityPagePageModule)
+  },
+  {
+    path: 'activity-page',
+    component: ActivityPagePage,
+  },
+
 ];
 
 @NgModule({
