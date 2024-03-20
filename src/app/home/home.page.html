@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      HOME PAGE
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,8 +12,8 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
+    <ion-button href="custom-page/1">Go By Link</ion-button>
+    <ion-button (click)="goToCustomPage()">Go By Event</ion-button>
   </div>
 </ion-content>
